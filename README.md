@@ -9,11 +9,11 @@ Object detection for car classification using the Amazon SageMaker Object Detect
 ## Deploy Serverless Api gateway
 
 ```
-sls deploy
+sls deploys
 ```
 
 ## Invoke SageMaker endpoint
 
 ```
-curl -d '{"img_url":"https://image-url.jpg"}' -H "Content-Type: application/json" -X POST https://sagemaker_endpoint_url
+curl -d '{"img_url":"https://image-url.jpg"}' -H "Content-Type: application/json" -X POST https://api_gatewat_endpoint
 ```
