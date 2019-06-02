@@ -1,0 +1,22 @@
+service: car-classification
+
+provider:
+  name: aws
+  runtime: python3.7
+  region: ap-southeast-2
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - sagemaker:InvokeEndpoint
+      Resource: ${ssm:sagemakerarn}
+  environment:
+    SAGEMAKER_ENDPOINT_NAME: "object-detection-2019-06-01-04-13-54-575"
+
+functions:
+  hello:
+    handler: handler.detectVehicle
+    events:
+      - http:
+          path: sagemaker
+          method: post
+          cors: true
