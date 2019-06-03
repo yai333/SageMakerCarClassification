@@ -2,7 +2,7 @@
 
 Object detection for car classification using the Amazon SageMaker Object Detection algorithm with a public dataset of [Cars Dataset from Stanford](http://ai.stanford.edu/~jkrause/cars/car_dataset.html).
 
-## SageMaker
+## SageMaker Jupyter notebook
 
 - CarClassification.ipynb
 
